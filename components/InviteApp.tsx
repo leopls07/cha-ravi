@@ -51,8 +51,8 @@ export function InviteApp() {
   const [pixValorInicial, setPixValorInicial] = useState<number | null>(null);
   const [direction, setDirection] = useState(1);
   const scrollRef = useRef<HTMLDivElement>(null);
-  const contentRef = useRef<HTMLDivElement>(null);
-  const showScrollHint = useScrollHint(scrollRef, contentRef);
+  const [contentEl, setContentEl] = useState<HTMLDivElement | null>(null);
+  const showScrollHint = useScrollHint(scrollRef, contentEl);
 
   function goToIndex(nextIndex: number) {
     const clamped = Math.max(0, Math.min(SCREEN_ORDER.length - 1, nextIndex));
@@ -114,28 +114,27 @@ export function InviteApp() {
       <div className="flex h-full min-h-0 flex-col">
         <div
           ref={scrollRef}
-          className="relative min-h-0 flex-1 overflow-y-auto overflow-x-hidden no-scrollbar"
+          className="relative flex min-h-0 flex-1 flex-col overflow-y-auto overflow-x-hidden no-scrollbar"
         >
-          <div ref={contentRef} className="min-h-full">
-            <AnimatePresence mode="wait" custom={direction} initial={false}>
-              <motion.div
-                key={screenId}
-                custom={direction}
-                variants={slideVariants}
-                initial="enter"
-                animate="center"
-                exit="exit"
-                transition={{ duration: 0.25, ease: "easeInOut" }}
-                drag={screenId === "envelope" ? false : "x"}
-                dragConstraints={{ left: 0, right: 0 }}
-                dragElastic={0.15}
-                onDragEnd={handleDragEnd}
-                className="min-h-full"
-              >
-                {renderScreen()}
-              </motion.div>
-            </AnimatePresence>
-          </div>
+          <AnimatePresence mode="wait" custom={direction} initial={false}>
+            <motion.div
+              key={screenId}
+              ref={setContentEl}
+              custom={direction}
+              variants={slideVariants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              transition={{ duration: 0.25, ease: "easeInOut" }}
+              drag={screenId === "envelope" ? false : "x"}
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={0.15}
+              onDragEnd={handleDragEnd}
+              className="flex flex-1 flex-col"
+            >
+              {renderScreen()}
+            </motion.div>
+          </AnimatePresence>
           <ScrollHint visible={showScrollHint} />
         </div>
 

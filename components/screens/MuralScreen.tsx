@@ -109,17 +109,27 @@ export function MuralScreen({ onNext, onBack }: ScreenProps) {
     };
     setRecados((atuais) => [otimista, ...atuais]);
 
-    const { error } = await supabase
+    const { data, error } = await supabase
       .from("recados")
-      .insert({ nome: nomeLimpo, mensagem: mensagemLimpa });
+      .insert({ nome: nomeLimpo, mensagem: mensagemLimpa })
+      .select()
+      .single();
 
     setEnviando(false);
 
-    if (error) {
+    if (error || !data) {
       setRecados((atuais) => atuais.filter((r) => r.id !== otimista.id));
       setErro("Não foi possível enviar seu recado agora. Tente novamente.");
       return;
     }
+
+    // Troca o id local pelo id real assim que ele chega. Também remove uma
+    // possível cópia já inserida pelo realtime (que pode chegar antes desta
+    // resposta), evitando duplicidade nos dois sentidos da corrida.
+    setRecados((atuais) => {
+      const semDuplicata = atuais.filter((r) => r.id !== otimista.id && r.id !== data.id);
+      return [data, ...semDuplicata];
+    });
 
     window.localStorage.setItem(RATE_LIMIT_KEY, String(Date.now()));
     setNome("");

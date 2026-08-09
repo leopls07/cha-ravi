@@ -39,12 +39,13 @@ O mural de recados e o quiz usam o Supabase apenas para leitura/inserção públ
 2. Abra **SQL Editor** e rode o conteúdo de [`supabase/schema.sql`](supabase/schema.sql). Isso
    cria as tabelas `recados` e `votos`, ativa Row Level Security com políticas de leitura e
    inserção públicas, e habilita o Realtime na tabela `recados`.
-3. Em **Project Settings > API**, copie a **Project URL** e a **anon public key**.
+3. Em **Project Settings > API**, copie a **Project URL** e a **anon public key** (em projetos
+   novos o painel chama essa chave de **Publishable key**, com prefixo `sb_publishable_...`).
 4. Copie `.env.example` para `.env.local` e preencha:
 
    ```bash
    NEXT_PUBLIC_SUPABASE_URL=...
-   NEXT_PUBLIC_SUPABASE_ANON_KEY=...
+   NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=...
    ```
 
 Sem essas variáveis configuradas, o site inteiro continua funcionando normalmente — apenas o
@@ -55,7 +56,7 @@ mural e o quiz mostram uma mensagem de "indisponível no momento".
 1. Suba o repositório para o GitHub (ou outro provedor suportado).
 2. Em [vercel.com/new](https://vercel.com/new), importe o repositório.
 3. Em **Environment Variables**, adicione `NEXT_PUBLIC_SUPABASE_URL` e
-   `NEXT_PUBLIC_SUPABASE_ANON_KEY`.
+   `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`.
 4. Deploy. A Vercel detecta o Next.js automaticamente (sem configuração adicional).
 
 ## Estrutura

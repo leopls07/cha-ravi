@@ -16,30 +16,26 @@ export const EVENTO = {
   frase: "Nosso pequeno grande amor",
 };
 
-// TEMP: números trocados por 11961707443 só para testes — reverter para os
-// números reais (5561999790968 / 5561983046539) antes de publicar.
 export const CONTATOS = [
   {
     nome: "Emilly Bento Szervinsks",
     papel: "Mamãe do Ravi",
-    whatsapp: "5511961707443",
+    whatsapp: "5561999790968",
   },
   {
     nome: "Organização",
     papel: "Dúvidas sobre o chá",
-    whatsapp: "5511961707443",
+    whatsapp: "5561983046539",
   },
   // TODO: confirmar/ajustar nomes e números antes de publicar
 ];
 
 // Número que recebe as confirmações de presença (RSVP) via WhatsApp
-// TEMP: número de teste — reverter para 5561983046539 antes de publicar.
-export const WHATSAPP_RSVP = "5511961707443";
+export const WHATSAPP_RSVP = "5561983046539";
 
-// TEMP: chave Pix de teste — reverter para "+5561999790968" / "EMILLY BENTO SZERVINSKS" antes de publicar.
 export const PIX = {
-  chave: "+5511961707443", // chave = celular
-  chaveExibicao: "+55 11 96170-7443",
+  chave: "+5561999790968", // chave = celular
+  chaveExibicao: "+55 61 99979-0968",
   nome: "EMILLY BENTO SZERVINSKS", // máx 25 chars, sem acento, MAIÚSCULO
   cidade: "BRASILIA", // TODO: confirmar cidade cadastrada na conta Pix — máx 15 chars, sem acento, MAIÚSCULO
   valorPacoteFralda: 75.0,

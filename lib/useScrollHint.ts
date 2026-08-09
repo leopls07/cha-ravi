@@ -7,16 +7,16 @@ const OVERFLOW_THRESHOLD = 8;
 
 // Mostra a dica só quando há conteúdo real abaixo da dobra e some perto do
 // fim — a medição roda em callbacks (ResizeObserver/scroll), nunca direto no
-// corpo do efeito.
+// corpo do efeito. `contentEl` é estado reativo (via ref callback) porque o
+// nó observado é remontado a cada troca de tela.
 export function useScrollHint(
   scrollRef: RefObject<HTMLElement | null>,
-  contentRef: RefObject<HTMLElement | null>
+  contentEl: HTMLElement | null
 ): boolean {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     const scrollEl = scrollRef.current;
-    const contentEl = contentRef.current;
     if (!scrollEl || !contentEl) return;
 
     function update() {
@@ -35,7 +35,7 @@ export function useScrollHint(
       resizeObserver.disconnect();
       scrollEl.removeEventListener("scroll", update);
     };
-  }, [scrollRef, contentRef]);
+  }, [scrollRef, contentEl]);
 
   return visible;
 }
