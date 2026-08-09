@@ -84,9 +84,10 @@ export const MIMOS_SUGERIDOS = [
 ];
 
 export const PACOTES_ATALHO = [1, 2, 3, 5, 10];
-export const PACOTES_MIN = 1;
+export const PACOTES_MIN = 0;
 export const PACOTES_MAX = 20;
 
+// Só chamar quando qtd > 0 — a mensagem não faz sentido para carrinho vazio.
 export function mensagemPacotes(qtd: number): string {
   if (qtd <= 1) return "Um pacote já salva um dia inteiro! 🍼";
   if (qtd <= 3) return "O bumbum do Ravi agradece 💛";

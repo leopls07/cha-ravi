@@ -71,7 +71,7 @@ export function CoverScreen({ onNext, onBack }: ScreenProps) {
         👉 arraste para o lado ou toque no botão
       </p>
 
-      <ScreenFooter onBack={onBack} onNext={onNext} nextLabel="Ver detalhes →" />
+      <ScreenFooter onBack={onBack} onNext={onNext} nextLabel="Continuar →" />
     </div>
   );
 }

@@ -93,7 +93,7 @@ export function InviteApp() {
           <GiftsScreen
             {...baseProps}
             onPresentear={(valor) => {
-              setPixValorInicial(valor);
+              setPixValorInicial(valor > 0 ? valor : null);
               goTo("pix");
             }}
           />

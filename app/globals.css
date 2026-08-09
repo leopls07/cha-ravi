@@ -1,6 +1,10 @@
 @import "tailwindcss";
 
 :root {
+  /* Site é só light — impede o "dark mode forçado" do Android/Chrome de
+     reescrever as cores automaticamente quando o celular está no modo escuro. */
+  color-scheme: only light;
+
   --verde-salvia: #a3b18a;
   --verde-escuro: #6b7f5e;
   --dourado: #b8963f;
