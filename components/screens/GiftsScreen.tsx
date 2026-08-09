@@ -7,6 +7,7 @@ import {
   MIMOS_SUGERIDOS,
   OUTROS_PRESENTES,
   PACOTES_ATALHO,
+  PACOTES_ICONES_MAX,
   PACOTES_MAX,
   PACOTES_MIN,
   PIX,
@@ -102,24 +103,26 @@ export function GiftsScreen({ onBack, onPresentear }: GiftsScreenProps) {
 
           {qtdFraldas > 0 && (
             <>
-              <div
-                className="flex min-h-14 flex-wrap items-end justify-center gap-1"
-                aria-hidden="true"
-              >
-                <AnimatePresence initial={false}>
-                  {Array.from({ length: qtdFraldas }).map((_, i) => (
-                    <motion.div
-                      key={i}
-                      initial={{ scale: 0, opacity: 0 }}
-                      animate={{ scale: 1, opacity: 1 }}
-                      exit={{ scale: 0, opacity: 0 }}
-                      transition={{ type: "spring", stiffness: 400, damping: 15 }}
-                    >
-                      <DiaperIcon className="h-8 w-8" />
-                    </motion.div>
-                  ))}
-                </AnimatePresence>
-              </div>
+              {qtdFraldas <= PACOTES_ICONES_MAX && (
+                <div
+                  className="flex min-h-14 flex-wrap items-end justify-center gap-1"
+                  aria-hidden="true"
+                >
+                  <AnimatePresence initial={false}>
+                    {Array.from({ length: qtdFraldas }).map((_, i) => (
+                      <motion.div
+                        key={i}
+                        initial={{ scale: 0, opacity: 0 }}
+                        animate={{ scale: 1, opacity: 1 }}
+                        exit={{ scale: 0, opacity: 0 }}
+                        transition={{ type: "spring", stiffness: 400, damping: 15 }}
+                      >
+                        <DiaperIcon className="h-8 w-8" />
+                      </motion.div>
+                    ))}
+                  </AnimatePresence>
+                </div>
+              )}
 
               <p className="text-center font-sans text-sm font-medium text-marrom-cacau">
                 {mensagemPacotes(qtdFraldas)}
