@@ -1,0 +1,22 @@
+{
+  "name": "Chá de Fraldas do Ravi",
+  "short_name": "Chá do Ravi",
+  "description": "Convite digital do Chá de Fraldas do Ravi — 05/09/2026, CRESSPOM.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAF5EC",
+  "theme_color": "#FAF5EC",
+  "lang": "pt-BR",
+  "icons": [
+    {
+      "src": "/icon",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-icon",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

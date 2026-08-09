@@ -4,7 +4,10 @@
       "Bash(npm -v)",
       "Bash(git --version)",
       "Bash(npx --yes create-next-app@latest . --typescript --tailwind --app --eslint --no-src-dir --import-alias \"@/*\" --use-npm)",
-      "Bash(cd \"c:/dev/pessoal/cha-fralda-ravi\" && mv PROMPT-claude-code-cha-ravi.md ../PROMPT-claude-code-cha-ravi.md.bak && ls -la)"
+      "Bash(cd \"c:/dev/pessoal/cha-fralda-ravi\" && mv PROMPT-claude-code-cha-ravi.md ../PROMPT-claude-code-cha-ravi.md.bak && ls -la)",
+      "Bash(npm install *)",
+      "Bash(node -e ' *)",
+      "Bash(npx vitest *)"
     ],
     "additionalDirectories": [
       "c:\\dev\\pessoal"
