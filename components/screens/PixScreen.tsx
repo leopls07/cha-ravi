@@ -88,8 +88,8 @@ export function PixScreen({ onNext, onBack, valorInicial }: PixScreenProps) {
     <div className="flex flex-col gap-4 px-6 pb-4 pt-6">
       <h2 className="text-center font-script text-3xl text-dourado">Pix</h2>
       <p className="text-center font-sans text-sm text-marrom-cacau">
-        Se você mora longe ou preferir, pode contribuir por Pix. Sem nenhuma obrigação — sua
-        presença já é o maior presente.
+        Se você não puder estar presente nesse dia, mas quiser me mandar um carinho mesmo de
+        longe, essa é uma forma bem fácil: 💙
       </p>
 
       <Card>

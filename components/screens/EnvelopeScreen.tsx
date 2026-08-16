@@ -18,7 +18,7 @@ export function EnvelopeScreen({ onNext }: ScreenProps) {
   return (
     <div className="flex flex-1 flex-col items-center justify-center gap-6 px-6 text-center">
       <p className="font-sans text-sm uppercase tracking-widest text-marrom-claro">
-        Você recebeu um convite especial
+        Psiu... alguém aqui dentro quer te contar uma novidade 👶
       </p>
 
       <button
@@ -60,7 +60,7 @@ export function EnvelopeScreen({ onNext }: ScreenProps) {
         onClick={handleOpen}
         className="min-h-11 rounded-full bg-gradient-to-r from-verde-salvia to-verde-escuro px-6 py-3 font-sans text-sm font-semibold text-white shadow-md"
       >
-        Abrir convite →
+        Abrir meu convite →
       </button>
     </div>
   );

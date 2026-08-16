@@ -2,8 +2,8 @@
 // Editar este arquivo é suficiente para atualizar textos, valores e contatos do site.
 
 export const EVENTO = {
-  bebe: "Ravi",
-  titulo: "Chá de Fraldas do Ravi",
+  bebe: "Ravi Alessandro",
+  titulo: "Chá de Fraldas do Ravi Alessandro",
   // TODO: confirmar data e horário definitivos com a família
   data: "2026-09-05T12:00:00-03:00", // Sábado, 05 de setembro de 2026
   dataLabel: "Sábado, 05 de setembro de 2026",
@@ -13,7 +13,8 @@ export const EVENTO = {
   endereco:
     "Setor de Clubes Recreativos e Esportivos Norte, Trecho 3, Conjunto 11/14 — Brasília/DF",
   mapsQuery: "CRESSPOM Setor de Clubes Norte Trecho 3 Conjunto 11/14 Brasilia DF",
-  frase: "Nosso pequeno grande amor",
+  frase:
+    "Oi, eu sou o Ravi! Ainda estou bem guardadinho na barriga da mamãe, mas ansioso para conhecer a minha família. Enquanto isso, meus pais estão preparando um Chá de Fraldas só pra mim, e eu adoraria muito ter você lá! 💙",
 };
 
 export const CONTATOS = [
