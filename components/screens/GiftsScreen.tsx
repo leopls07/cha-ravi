@@ -46,7 +46,8 @@ export function GiftsScreen({ onBack, onPresentear }: GiftsScreenProps) {
     <div className="flex flex-col gap-4 px-6 pb-4 pt-6">
       <h2 className="text-center font-script text-3xl text-dourado">Presentes</h2>
       <p className="text-center font-sans text-sm text-marrom-cacau">
-        Vá adicionando o que quiser — o valor total é somado automaticamente.
+        Se você quiser me presentear com fraldas e/ou um mimo, minha mamãe preparou algumas
+        sugestões com carinho. Mas venha principalmente para comemorar comigo! 💙👶
       </p>
 
       <Card>

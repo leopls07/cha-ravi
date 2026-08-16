@@ -38,6 +38,10 @@ export function DetailsScreen({ onNext, onBack }: ScreenProps) {
   return (
     <div className="flex flex-col gap-4 px-6 pb-4 pt-6">
       <h2 className="text-center font-script text-3xl text-dourado">Detalhes</h2>
+      <p className="text-center font-sans text-sm text-marrom-cacau">
+        Separa a agenda! Eu ainda não cheguei ao mundo, mas vou estar presente de pertinho nesse
+        dia! 🥰
+      </p>
 
       <Card className="space-y-4">
         <InfoRow icon="📅" label="Data" value={EVENTO.dataLabel} />

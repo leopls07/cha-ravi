@@ -7,7 +7,8 @@
       "Bash(cd \"c:/dev/pessoal/cha-fralda-ravi\" && mv PROMPT-claude-code-cha-ravi.md ../PROMPT-claude-code-cha-ravi.md.bak && ls -la)",
       "Bash(npm install *)",
       "Bash(node -e ' *)",
-      "Bash(npx vitest *)"
+      "Bash(npx vitest *)",
+      "Bash(npm run *)"
     ],
     "additionalDirectories": [
       "c:\\dev\\pessoal"

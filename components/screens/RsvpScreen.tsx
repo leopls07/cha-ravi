@@ -53,8 +53,8 @@ export function RsvpScreen({ onNext, onBack, goTo }: ScreenProps) {
         <Card>
           <p className="font-display text-lg text-marrom-cacau">
             {stored.comparecer
-              ? `Que alegria, ${stored.nome}! Já estamos te esperando 💛`
-              : `Sentiremos sua falta, ${stored.nome} 💛`}
+              ? `Ahh, que alegria, ${stored.nome}! Já estou ansioso para esse encontro! 💙👶`
+              : `Poxa, vou sentir sua falta, ${stored.nome}... Mas tudo bem! Quando eu chegar, a mamãe manda fotos! 🥺💙`}
           </p>
         </Card>
         <Button
@@ -103,13 +103,13 @@ export function RsvpScreen({ onNext, onBack, goTo }: ScreenProps) {
       <div className="relative flex flex-col gap-4 px-6 pb-4 pt-6 text-center">
         {stored.comparecer && <Confetti />}
         <h2 className="font-script text-3xl text-dourado">
-          {stored.comparecer ? "Presença confirmada!" : "Obrigada por avisar"}
+          {stored.comparecer ? "Presença confirmada!" : "Obrigado por avisar"}
         </h2>
         <Card>
           <p className="font-display text-lg font-semibold text-marrom-cacau">
             {stored.comparecer
-              ? `Presença confirmada, ${stored.nome}! 💛`
-              : `Sentiremos sua falta, ${stored.nome} 💛`}
+              ? `Ahh, que alegria, ${stored.nome}! Já estou ansioso para esse encontro! 💙👶`
+              : `Poxa, vou sentir sua falta, ${stored.nome}... Mas tudo bem! Quando eu chegar, a mamãe manda fotos! 🥺💙`}
           </p>
         </Card>
 
@@ -150,6 +150,9 @@ export function RsvpScreen({ onNext, onBack, goTo }: ScreenProps) {
   return (
     <div className="flex flex-col gap-4 px-6 pb-4 pt-6">
       <h2 className="text-center font-script text-3xl text-dourado">Confirmar presença</h2>
+      <p className="text-center font-sans text-sm text-marrom-cacau">
+        Meus pais ficariam muito felizes em saber se você vem comemorar comigo! Confirma pra mim?
+      </p>
 
       <Card className="space-y-4">
         <div>

@@ -4,11 +4,12 @@ export type QuizPergunta = { id: string; texto: string; opcoes: QuizOpcao[] };
 export const QUIZ_PERGUNTAS: QuizPergunta[] = [
   {
     id: "parecido",
-    texto: "Vai puxar mais o papai ou a mamãe?",
+    texto: "Será que eu vou puxar mais a quem? 👶💙",
     opcoes: [
-      { id: "papai", label: "Papai" },
-      { id: "mamae", label: "Mamãe" },
-      { id: "os-dois", label: "Um pouco dos dois" },
+      { id: "mamae", label: "À mamãe" },
+      { id: "papai", label: "Ao papai" },
+      { id: "familia-mamae", label: "À família da mamãe" },
+      { id: "familia-papai", label: "À família do papai" },
     ],
   },
   {
@@ -20,15 +21,6 @@ export const QUIZ_PERGUNTAS: QuizPergunta[] = [
       { id: "3-35", label: "3–3,5kg" },
       { id: "35-4", label: "3,5–4kg" },
       { id: "mais-4", label: "> 4kg" },
-    ],
-  },
-  {
-    id: "data-nascimento",
-    texto: "Vai nascer antes, no dia certo ou depois da data prevista?",
-    opcoes: [
-      { id: "antes", label: "Antes" },
-      { id: "no-dia", label: "No dia certo" },
-      { id: "depois", label: "Depois" },
     ],
   },
   {
