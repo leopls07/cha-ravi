@@ -4,15 +4,17 @@
 export const EVENTO = {
   bebe: "Ravi Alessandro",
   titulo: "Chá de Fraldas do Ravi Alessandro",
-  // TODO: confirmar data e horário definitivos com a família
-  data: "2026-09-05T12:00:00-03:00", // Sábado, 05 de setembro de 2026
-  dataLabel: "Sábado, 05 de setembro de 2026",
-  dataCurta: "05/09/2026",
+  // TODO: confirmar horário definitivo com a família
+  data: "2026-09-19T12:00:00-03:00", // Sábado, 19 de setembro de 2026
+  dataLabel: "Sábado, 19 de setembro de 2026",
+  dataCurta: "19/09/2026",
   horaLabel: "12h",
-  local: "CRESSPOM",
+  local: "Clube da ASSTJ",
   endereco:
-    "Setor de Clubes Recreativos e Esportivos Norte, Trecho 3, Conjunto 11/14 — Brasília/DF",
-  mapsQuery: "CRESSPOM Setor de Clubes Norte Trecho 3 Conjunto 11/14 Brasilia DF",
+    "Setor de Clubes Esportivos Sul, Lote 1 — Asa Sul, Brasília/DF, 70200-001",
+  // "5483+7X Brasília DF" é o plus code do local (mais preciso que o endereço
+  // para clubes no Setor de Clubes, que costuma falhar na busca por lote).
+  mapsQuery: "5483+7X Brasília DF",
   frase:
     "Oi, eu sou o Ravi! Ainda estou bem guardadinho na barriga da mamãe, mas ansioso para conhecer a minha família. Enquanto isso, meus pais estão preparando um Chá de Fraldas só pra mim, e eu adoraria muito ter você lá! 💙",
 };
@@ -38,7 +40,7 @@ export const PIX = {
   chave: "+5561999790968", // chave = celular
   chaveExibicao: "+55 61 99979-0968",
   nome: "EMILLY BENTO SZERVINSKS", // máx 25 chars, sem acento, MAIÚSCULO
-  cidade: "BRASILIA", // TODO: confirmar cidade cadastrada na conta Pix — máx 15 chars, sem acento, MAIÚSCULO
+  cidade: "BRASILIA",
   valorPacoteFralda: 75.0,
 };
 
